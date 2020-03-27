@@ -24,7 +24,7 @@ function generateToken(user){
 router.post('/register', (req, res) => {
   const user = req.body;
 
-  const hash= bcrypt.hashSync(user.password,12)
+  const hash= bcrypt.hashSync(user.password,13)
   user.password= hash;
 
   login.addUser(user)
